@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario reserva</title>
+    <link rel="stylesheet" href="css/estilosformularios.css">
+</head>
+<body>
+    <h1>Haga su reserva</h1>
+    <form action="realizareserva.php" method="get"><!--post para que no agregue la informacion al url-->
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" 
+            maxlength="30" autofocus required><br>  
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" 
+            id="apellidos" maxlength="50"><br>
+            <label for="dni">DNI:</label>
+            <input type="text"name="dni" id="dni"
+            required placeholder="dni con letra">
+        </fieldset>
+        <fieldset>  
+            <legend>Datos de su estancia</legend>
+            <label for="numpersonas">Numero de personas:</label>
+            <input type="number" name="numpersonas" 
+            id="numpersonas" value="2" min="1" max="6"><br>
+            <label for="llegada">Fecha de llegada</label>
+            <input type="date" name="llegada" id="llegada"><br>
+            <label for="salida">Fecha de salida</label>
+            <input type="date" name="salida" id="salida"><br>
+            <label for="habitacion">Tipo de habitación</label>
+            <select name="habitacion" id="habitacion">
+                <option value="individual">Individual</option>
+                <option value="doble" selected>Doble</option>
+                <option value="triple">Triple</option>
+            </select><br>
+            <label for="fuma">No fumador:</label>
+            <input type="checkbox" id="fuma" name="fuma" checked><br>
+            <label for="mot_viaje">Motivo del viaje:</label>
+            Trabajo<input type="radio" name="mot_viaje" id="trabajo">
+            Ocio<input type="radio" name="mot_viaje" id="ocio" checked>
+            Otros<input type="radio" name="mot_viaje" id="otros">
+        </fieldset>
+        <button type="submit">Reservar</button>
+        <button type="reset">Restablecer</button>
+    </form>
+    <button><a href="index.html">Volver</a></button>
+</body>
+</html>
