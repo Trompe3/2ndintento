@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 2022</title>
+    <style>
+        *{margin: 0; font-family: Arial;}
+        header {background-image: url(images/portada.jpg); height: 300px; background-size: cover; background-position: center;
+        display: flex; justify-content: center; 
+        align-items: center; text-align: center;}
+        header h1{ font-size: 3em; color: white;
+        text-shadow: 3px 3px 3px aquamarine;}
+        header p{font-style: italic; color: white;
+        text-shadow: 3px 3px 3px black;}
+        nav {background-color: aquamarine; display: flex; justify-content: space-around; align-items: center; padding: 10px;}
+        nav a{text-decoration: none; color: green;}
+        nav a:hover{color: blue; font-weight: bold;
+        text-shadow: 3px 3px 3px white;}
+        /**a:visited, a:active, a:focus, a:link*/
+        h1.titulo{color: darkcyan; text-align: center;}
+        .contenedor{ display: flex; align-items: center;
+        justify-content: space-around;}
+        .contenedor #izquierda{width: 35%;}
+        .contenedor #izquierda h1{margin-bottom: 10px;}
+        .contenedor #derecha{width: 35%; display: flex; justify-content: center;}
+        #nuestros_destinos {display: flex; justify-content: space-around; flex-wrap: wrap;}
+        .destino {width: 33%;}
+        .destino img{width: 90%; box-shadow: 5px 5px 5px black;}
+        footer {background-color: grey; padding: 30px;}
+        #pie {display: flex;justify-content: space-around;}
+        #pie div{width: 33%; text-align: center;}
+        #pie div a{text-decoration: none; color: black;}
+        footer h5{text-align: center;}
+        
+/** para pantallas mas chicas */
+        @media (max-width: 600px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor #izquierda,
+    .contenedor #derecha {
+        width: 90%;
+    }
+
+    #nuestros_destinos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destino {
+        width: 90%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    #pie {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #pie div {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Viajes Bosco</h1>
+            <p>donde te lleven tus sueños</p>
+        </div>
+    </header>
+    <nav>
+        <a href="#quienes_somos">Quienes Somos</a>
+        <a href="#nuestros_destinos">Nuestros Destinos</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Catalogo2020</a>
+    </nav>
+<section id="quienes_somos">
+        <h1 class="titulo" >Quienes somos</h1>
+    <div class="contenedor">
+        <div id="izquierda">
+            <h1>Quienes somos</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, nam adipisci quis suscipit magni quibusdam ex corrupti temporibus corporis aliquam quidem sequi possimus molestias laudantium dolores voluptatum animi culpa at!</p>
+        </div>
+        <div id="derecha">
+            <img src="images/restaurante.jpg">
+        </div>
+    </div>
+</section>
+<h1 class="titulo">nuestros destinos</h1>
+<section id="nuestros_destinos">
+
+    <div class="destino">
+        <img src="images/ciudadmar.jpg">
+        <p>Grecia</p>
+    </div>
+    <div class="destino">
+        <img src="images/coliseo.jpg">
+        <p>Roma</p>
+    </div>
+    <div class="destino">
+        <img src="images/marruecos.jpg">
+        <p>Marruecos</p>
+    </div>
+    <div class="destino">
+        <img src="images/piramide.jpg">
+        <p>Egipto</p>
+    </div>
+    <div class="destino">
+        <img src="images/playajpg.jpg">
+        <p>Playas</p>
+    </div>
+    <div class="destino">
+        <img src="images/santuariojap.jpg">
+        <p>Japon</p>
+    </div>
+</section>
+<footer>
+    <div id="pie">
+        <div><a href="https://www.facebook.com">Facebook</a></div>
+        <div><a href="https://www.x.com">Twitter</a></div>
+        <div><a href="https://www.instagram.com">Instagram</a></div>
+    </div>
+    <br><h5>Diseñado por Bosco Desing .S.A</h5>
+    <button style="border-radius: 10px;">
+        <a href="tarea2/index.html" style="text-decoration: none;
+         color: red; font-size: 20px;">
+            Ir a Tarea 2</a></button>
+</footer>
+</body>
+</html>
